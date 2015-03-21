@@ -25,6 +25,8 @@
           . "</td>";
       echo "</tr>";
     endforeach;
-  echo "</table>"
-
+  echo "</table>";
 ?>
+<a href="../pdf.php" >
+  <?php echo "<img src='".$img."pdf.png' width='16px' height='16px' title='Gerar PDF' />"; ?>
+</a>
