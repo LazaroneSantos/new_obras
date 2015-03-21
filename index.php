@@ -1,5 +1,4 @@
 <?php
-
   echo "<link rel='shortcut icon' href='img/favicon.ico' >";
   echo "<head><title>SAO - Sistema de Adiministração de Obras</title></head>";
   echo "<h1 style='text-align: center'>Projeto em Construção</h1>";

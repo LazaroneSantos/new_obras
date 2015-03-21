@@ -27,6 +27,6 @@
     endforeach;
   echo "</table>";
 ?>
-<a href="../pdf.php" >
+<a href="pdf/pdf_list_fase.php" >
   <?php echo "<img src='".$img."pdf.png' width='16px' height='16px' title='Gerar PDF' />"; ?>
 </a>
