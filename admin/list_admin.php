@@ -17,7 +17,7 @@
   echo "<th style='".$th_style."'>EMAIL</th>";
   echo "<th style='".$th_style."'>TELEFONE</th>";
   echo "<th style='".$th_style."'>NIVEL</th>";
-  echo "<th style='".$th_style."'>FUNCOES</th>";
+  echo "<th style='".$th_style."'>FUNÇÕES</th>";
 
   echo "</tr>";
     foreach ($admins as $admin) :

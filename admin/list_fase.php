@@ -14,7 +14,7 @@
   echo "<table>";
   echo "<tr>";
   echo "<th style='".$th_style."'>NOME</th>";
-  echo "<th style='".$th_style."'>FUNCOES</th>";
+  echo "<th style='".$th_style."'>FUNÇÕES</th>";
 
   echo "</tr>";
     foreach ($fases as $fase) :

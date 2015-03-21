@@ -2,21 +2,31 @@
 
   require 'config/config.php';
 
-  if(isset($_GET['id'])):
-    $fase = Fase::find($_GET['id']);
+  if(isset($_REQUEST['id'])):
+    $fase = Fase::find($_REQUEST['id']);
   endif;
 
-  if(isset($fase) & isset($_POST['save'])):
-    $fase->update_attributes(array('nome' => $_POST['nome']));
-    echo "<script>alert('Alteracao realizada com Sucesso!');";
+  if(isset($fase) & isset($_REQUEST['save'])):
+    $fase->nome = $_REQUEST['nome'];
+    $fase->save();
+    if ($fase->is_valid()):
+      echo "<script>alert('Operação realizada com Sucesso!');";
       echo "window.location='list_fase.php';</script>";
+    else:
+      echo $fase->errors->on('nome');
+    endif;
   endif;
 
-  if(!isset($fase) & isset($_POST['save'])):
-    Fase::factory(
-      array('nome' => $_POST['nome']
-      )
-    );
+  if(!isset($fase) & isset($_REQUEST['save'])):
+    $dados = array('nome' => $_REQUEST['nome']);
+    $fase = new Fase($dados);
+    $fase->save();
+    if ($fase->is_valid()):
+      echo "<script>alert('Operação realizada com Sucesso!');";
+      echo "window.location='list_fase.php';</script>";
+    else:
+      echo $fase->errors->on('nome');
+    endif;
   endif;
 ?>
 <!DOCTYPE html >
