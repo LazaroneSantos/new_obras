@@ -13,7 +13,10 @@
       echo "<script>alert('Operação realizada com Sucesso!');";
       echo "window.location='list_fase.php';</script>";
     else:
-      echo $fase->errors->on('nome');
+      echo "<div id='errors' name='errors'>"
+        .$fase->errors->on('nome')
+        ."</div>"
+      ;
     endif;
   endif;
 
