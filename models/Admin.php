@@ -1,6 +1,7 @@
 <?php
   class Admin extends ActiveRecord\Model {
     static $table_name = 'tb_admin';
+    static $primary_key = 'id';
 
     static $validates_presence_of = array( array('login','senha', 'nome'));
     static $validates_uniqueness_of = array( array('login'));

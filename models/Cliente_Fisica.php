@@ -1,6 +1,7 @@
 <?php
   class Cliente_Fisica extends ActiveRecord\Model {
     static $table_name = 'tb_cliente';
+    static $primary_key = 'id';
 
     static $validates_presence_of = array( array('cpf_cnpj','nome_razao_social'));
     static $validates_uniqueness_of = array( array('cpf_cnpj'));

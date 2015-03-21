@@ -1,6 +1,7 @@
 <?php
   class Etapa extends ActiveRecord\Model {
     static $table_name = 'tb_etapa';
+    static $primary_key = 'id';
 
     static $validates_presence_of = array( array('nome'));
 

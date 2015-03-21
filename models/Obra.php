@@ -1,6 +1,7 @@
 <?php
   class Obra extends ActiveRecord\Model {
     static $table_name = 'tb_obra';
+    static $primary_key = 'id';
 
     static $validates_presence_of = array( array('descricao'));
     static $validates_uniqueness_of = array( array('descricao'));

@@ -30,3 +30,8 @@
   echo "</table>"
 
 ?>
+<div style="width: 750px; padding-top: 10px; text-align: right;">
+  <a href="pdf/pdf_list_etapa.php" >
+    <?php echo "<img src='".$img."pdf.png' width='16px' height='16px' title='Gerar PDF' />"; ?>
+  </a>
+</div>
