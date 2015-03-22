@@ -24,6 +24,7 @@
         echo "<td style='".$td_style."'>".$etapa->porcentagem."</td>";
         echo "<td style='".$td_style."'>"
           . "<a href=form_etapa.php?id=".$etapa->id."><img src='".$img."editar.png' width='16px' height='16px' title='Editar' /></a>"
+          . "<a href=grafico_etapa.php?id=".$etapa->id.">detalhes</a>"
           . "</td>";
       echo "</tr>";
     endforeach;
